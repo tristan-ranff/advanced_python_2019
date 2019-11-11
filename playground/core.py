@@ -4,14 +4,13 @@ def find_peaks(list_of_entities):
     # of the elemetns in the list before and after are smaller than the peak we want to determine.
     # Args: list of floats or ints
     max_value = 0
-    list_of_maxima = []
+    list_of_dark_spots = []
     for pos, element in enumerate(list_of_entities):
         if pos == 0:
             continue
         if pos == len(list_of_entities) - 1:
             continue
-        if list_of_entities[pos - 1] < element > list_of_entities[pos + 1]:
-            max_value = element
-            list_of_maxima.append(max_value)
+        if sum(list_of_entities[pos - 1]) > sum(element) < sum(list_of_entities[pos + 1]):
+            list_of_dark_spots.append(pos)
 
-    return list_of_maxima
+    return list_of_dark_spots
