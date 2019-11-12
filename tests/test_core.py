@@ -1,4 +1,17 @@
 import playground
+import sys
+import os
+# This block is not neccessary if you instaled your package
+# using e.g. pip install -e
+sys.path.append(
+    os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__), # location of this file
+            os.pardir, # and one level up, in linux ../
+        )
+    )
+)
+# EOBlock
 
 
 def test_find_dark_spots():
