@@ -11,6 +11,6 @@ def find_peaks(list_of_entities):
         if pos == len(list_of_entities) - 1:
             continue
         if sum(list_of_entities[pos - 1]) > sum(element) < sum(list_of_entities[pos + 1]):
-            list_of_dark_spots.append(pos)
+            list_of_dark_spots.append([pos, element])
 
     return list_of_dark_spots
