@@ -1,4 +1,3 @@
-import playground
 import sys
 import os
 # This block is not neccessary if you instaled your package
@@ -12,7 +11,7 @@ sys.path.append(
     )
 )
 # EOBlock
-
+import playground
 
 def test_find_dark_spots():
     spots = playground.core.find_peaks([(0, 4, 5), (0, 3, 3), (0, 10, 1), (0, 0, 0), (1, 1, 1)])
